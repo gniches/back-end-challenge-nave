@@ -1,17 +1,17 @@
-###Codesandbox link
+### Codesandbox link
 ***
 Codesandbox link with programming logic exercises:
 https://codesandbox.io/s/zen-tu-6b7i3
 
 ***
-##About API
+## About API
 ***
-###Introduction
+### Introduction
 ***
  This repository demonstrates the use of Sequelize within an Express application. The implemented app is a user-project-relation system and part of Back-end challenge for a intership vacancy from NAVE company.
 
 ***
-###Starting App
+### Starting App
 ***
 Run these commands below to initialize the application and create an Postgree database hospeded in a pre-created Heroku server. Just open http://localhost:3000.
 
@@ -22,7 +22,7 @@ npm start or yarn dev
 
 ```
 ***
-###API Documentation
+### API Documentation
 ***
 
 The auxiliar API documentation could be found on:
