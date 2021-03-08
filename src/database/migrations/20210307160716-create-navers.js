@@ -1,7 +1,5 @@
 'use strict';
 
-const { INTEGER } = require("sequelize");
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('navers', {
@@ -9,7 +7,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
-        allowNull: false,
+        allowNull: false,  
       },
       name: {
         type: Sequelize.STRING(100),

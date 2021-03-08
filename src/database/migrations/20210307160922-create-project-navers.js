@@ -15,7 +15,9 @@ module.exports = {
           references: {
             model: 'projects',
             key: 'id',
-          }
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
         },
         naver_id: {
           type: Sequelize.INTEGER,
@@ -23,7 +25,9 @@ module.exports = {
           references: {
             model: 'navers',
             key: 'id',
-          }
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
         },
         created_at: {
           type: Sequelize.DATE,
