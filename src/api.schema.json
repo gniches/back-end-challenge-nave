@@ -1,0 +1,293 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Nave API",
+        "description": "This is a API documentation for a Back-end challenge for a intership vacancy from NAVE company."
+    },
+    "basePath": "/",
+    "tags": [],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [],
+                "description": "Get all Navers.",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Return Navers objects."
+                    }
+                }
+            }
+        },
+        "/navers": {
+            "post": {
+                "tags": [
+                    "Navers"
+                ],
+                "description": "Endpoint to add new Naver.",
+                "parameters": [
+                    {
+                        "name": "naver",
+                        "in": "body",
+                        "description": "Create a new Naver",
+                        "require": true,
+                        "type": "object"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The Naver has been created"
+                    },
+                    "400": {
+                        "description": "Invalid parameters",
+                        "example": {
+                            "message": "Invalid parameters",
+                            "code": "400",
+                            "erro": "Bad Request"
+                        }
+                    }
+                }
+            }
+        },
+        "/navers/1": {
+            "get": {
+                "tags": [
+                    "Navers"
+                ],
+                "description": "Endpoint to get a Naver by ID",
+                "parameters": [
+                    {
+                        "name": "naver_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return a object with Naver information."
+                    },
+                    "400": {
+                        "description": "Naver not found."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Navers"
+                ],
+                "description": "Endpoint to update Naver information.",
+                "parameters": [
+                    {
+                        "name": "naver_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return a confirmation message",
+                        "example": "Naver changed with success!"
+                    },
+                    "400": {
+                        "description": "Naver not found."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Navers"
+                ],
+                "description": "Endpoint to delete a Naver.",
+                "parameters": [
+                    {
+                        "name": "naver_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return a confirmation message",
+                        "example": "Naver deleted with success!"
+                    },
+                    "400": {
+                        "description": "Naver not found."
+                    }
+                }
+            }
+        },
+        "/projects": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "description": "Get all projects.",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Return projects objects."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Projects"
+                ],
+                "description": "Endpoint to add new project.",
+                "parameters": [
+                    {
+                        "name": "project",
+                        "in": "body",
+                        "description": "Create a new project",
+                        "require": true,
+                        "type": "object"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The project has been created"
+                    },
+                    "400": {
+                        "description": "Invalid parameters",
+                        "example": {
+                            "message": "Invalid parameters",
+                            "code": "400",
+                            "erro": "Bad Request"
+                        }
+                    }
+                }
+            }
+        },
+        "/projects/1": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "description": "Endpoint to get a project by ID",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return a object with project information."
+                    },
+                    "400": {
+                        "description": "Project not found."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Projects"
+                ],
+                "description": "Endpoint to update project information.",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return a confirmation message",
+                        "example": "Project changed with success!"
+                    },
+                    "400": {
+                        "description": "project not found."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Projects"
+                ],
+                "description": "Endpoint to delete a Project.",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Return a confirmation message",
+                        "example": "Project deleted with success!"
+                    },
+                    "400": {
+                        "description": "Project not found."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Naver": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": "ID autogenerated"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Full name of Naver"
+                },
+                "job_role": {
+                    "type": "string",
+                    "example": "Manager"
+                },
+                "birth_date": {
+                    "type": "string",
+                    "example": "YYYY-MM-DD"
+                },
+                "admission_date": {
+                    "type": "string",
+                    "example": "YYYY-MM-DD"
+                },
+                "created_at": {
+                    "type": "string",
+                    "example": "Autogenerated"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "example": "Autogenerated"
+                }
+            },
+            "xml": {
+                "name": "Naver"
+            }
+        },
+        "Project": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": "ID autogenerated"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Full name of project"
+                },
+                "created_at": {
+                    "type": "string",
+                    "example": "Autogenerated"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "example": "Autogenerated"
+                }
+            }
+        }
+    }
+}
